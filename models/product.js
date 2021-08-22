@@ -11,7 +11,7 @@ const postSchema = mongoose.Schema({
     elab: Date,
     venc: Date,
     lote: String,
-    qrcode: Number
+    qrcode: String
 },{ collection: 'osde' })
 
 module.exports = mongoose.model("Product", postSchema);
