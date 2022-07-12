@@ -6,11 +6,11 @@ const cors = require('cors');
 const app = express();
 var port = process.env.PORT;
 if (port === undefined){
-    port = 5000;
+    port = 3000;
 };
 
 // middlewares
-app.use(cors());
+//app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("uploads"));

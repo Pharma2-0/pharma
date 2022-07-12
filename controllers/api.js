@@ -23,8 +23,16 @@ module.exports = class API{
 
     // create product
     static async addProduct(req, res) {
+        console.log(req.body);
+        if (req.body.product) {
+            console.log('yep');
+        } else {
+            res.status(400).json({ message: 'no product'});
+        }
         const product = req.body;
+        console.log('addProduct');
         try{
+            console.log('inside');
             await Product.create(product);
             res.status(201).json({ message: "Post created successfully!" });
         } catch(err) {
